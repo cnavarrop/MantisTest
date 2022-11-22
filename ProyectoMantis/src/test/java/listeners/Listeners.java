@@ -79,6 +79,6 @@ public class Listeners implements ITestListener{
 	   * @param context The test context
 	   */
 	  public void onFinish(ITestContext context) {
-	    // not implemented
+	    Reporter.log("Suite Case Finalizado");
 	  }
 }
