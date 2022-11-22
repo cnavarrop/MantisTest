@@ -8,7 +8,6 @@ import cl.local.base.Base;
 public class ProbarLinksMiVista extends Base{
 	
 	@Test
-	
 	public void LinksMiVista()
 	{
 		LogInMantis(prop.getProperty("user"), prop.getProperty("pass"));
