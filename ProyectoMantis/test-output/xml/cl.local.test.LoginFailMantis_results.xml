@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="3,351">
+           time="2,978">
   <properties />
-            <testcase name="loginClaveIncorrecta" time="3,351" classname="cl.local.test.LoginFailMantis">
+            <testcase name="loginClaveIncorrecta" time="2,978" classname="cl.local.test.LoginFailMantis">
                 <failure type="java.lang.AssertionError"
                   message="Es posible que su cuenta esté desactivada o bloqueada o que el nombre de usuario y la contraseña proporcionados sean incorrectos."
               >
