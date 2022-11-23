@@ -11,80 +11,80 @@
       <![CDATA[Prueba Finalizada correctamente]]>
     </line>
   </reporter-output>
-  <suite name="Master" duration-ms="0" started-at="2022-11-23T17:11:07 CLST" finished-at="2022-11-23T17:11:07 CLST">
+  <suite name="Master" duration-ms="0" started-at="2022-11-23T17:58:23 CLST" finished-at="2022-11-23T17:58:23 CLST">
     <groups>
     </groups>
   </suite> <!-- Master -->
-  <suite name="Suite" duration-ms="49683" started-at="2022-11-23T17:10:06 CLST" finished-at="2022-11-23T17:10:56 CLST">
+  <suite name="Suite" duration-ms="59891" started-at="2022-11-23T17:56:56 CLST" finished-at="2022-11-23T17:57:56 CLST">
     <groups>
     </groups>
-    <test name="ProbarLinksMiVista" duration-ms="49683" started-at="2022-11-23T17:10:06 CLST" finished-at="2022-11-23T17:10:56 CLST">
+    <test name="ProbarLinksMiVista" duration-ms="59891" started-at="2022-11-23T17:56:56 CLST" finished-at="2022-11-23T17:57:56 CLST">
       <class name="cl.local.test.ProbarLinksMiVista">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:cl.local.test.ProbarLinksMiVista@1700915]" name="setUp" is-config="true" duration-ms="987" started-at="2022-11-23T17:10:06 CLST" finished-at="2022-11-23T17:10:07 CLST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:cl.local.test.ProbarLinksMiVista@1700915]" name="setUp" is-config="true" duration-ms="918" started-at="2022-11-23T17:56:56 CLST" finished-at="2022-11-23T17:56:57 CLST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="LinksMiVista()[pri:0, instance:cl.local.test.ProbarLinksMiVista@1700915]" name="LinksMiVista" duration-ms="48693" started-at="2022-11-23T17:10:07 CLST" finished-at="2022-11-23T17:10:56 CLST">
+        <test-method status="PASS" signature="LinksMiVista()[pri:0, instance:cl.local.test.ProbarLinksMiVista@1700915]" name="LinksMiVista" duration-ms="58968" started-at="2022-11-23T17:56:57 CLST" finished-at="2022-11-23T17:57:56 CLST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LinksMiVista -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:cl.local.test.ProbarLinksMiVista@1700915]" name="tearDown" is-config="true" duration-ms="91" started-at="2022-11-23T17:10:56 CLST" finished-at="2022-11-23T17:10:56 CLST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:cl.local.test.ProbarLinksMiVista@1700915]" name="tearDown" is-config="true" duration-ms="51" started-at="2022-11-23T17:57:56 CLST" finished-at="2022-11-23T17:57:56 CLST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- cl.local.test.ProbarLinksMiVista -->
     </test> <!-- ProbarLinksMiVista -->
   </suite> <!-- Suite -->
-  <suite name="Suite (0)" duration-ms="9341" started-at="2022-11-23T17:10:56 CLST" finished-at="2022-11-23T17:11:05 CLST">
+  <suite name="Suite (0)" duration-ms="25683" started-at="2022-11-23T17:57:56 CLST" finished-at="2022-11-23T17:58:22 CLST">
     <groups>
     </groups>
-    <test name="EliminarIncidencia" duration-ms="9341" started-at="2022-11-23T17:10:56 CLST" finished-at="2022-11-23T17:11:05 CLST">
+    <test name="EliminarIncidencia" duration-ms="25683" started-at="2022-11-23T17:57:56 CLST" finished-at="2022-11-23T17:58:22 CLST">
       <class name="cl.local.test.EliminarIncidencia">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:cl.local.test.EliminarIncidencia@5c30a9b0]" name="setUp" is-config="true" duration-ms="888" started-at="2022-11-23T17:10:56 CLST" finished-at="2022-11-23T17:10:57 CLST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:cl.local.test.EliminarIncidencia@5c30a9b0]" name="setUp" is-config="true" duration-ms="1254" started-at="2022-11-23T17:57:56 CLST" finished-at="2022-11-23T17:57:57 CLST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="eliminarIncidencia()[pri:0, instance:cl.local.test.EliminarIncidencia@5c30a9b0]" name="eliminarIncidencia" duration-ms="8446" started-at="2022-11-23T17:10:57 CLST" finished-at="2022-11-23T17:11:05 CLST">
+        <test-method status="PASS" signature="eliminarIncidencia()[pri:0, instance:cl.local.test.EliminarIncidencia@5c30a9b0]" name="eliminarIncidencia" duration-ms="24427" started-at="2022-11-23T17:57:57 CLST" finished-at="2022-11-23T17:58:22 CLST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- eliminarIncidencia -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:cl.local.test.EliminarIncidencia@5c30a9b0]" name="tearDown" is-config="true" duration-ms="95" started-at="2022-11-23T17:11:05 CLST" finished-at="2022-11-23T17:11:06 CLST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:cl.local.test.EliminarIncidencia@5c30a9b0]" name="tearDown" is-config="true" duration-ms="43" started-at="2022-11-23T17:58:22 CLST" finished-at="2022-11-23T17:58:22 CLST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- cl.local.test.EliminarIncidencia -->
     </test> <!-- EliminarIncidencia -->
   </suite> <!-- Suite (0) -->
-  <suite name="Suite Incidencia" duration-ms="8348" started-at="2022-11-23T17:09:57 CLST" finished-at="2022-11-23T17:10:06 CLST">
+  <suite name="Suite Incidencia" duration-ms="8051" started-at="2022-11-23T17:56:47 CLST" finished-at="2022-11-23T17:56:55 CLST">
     <groups>
     </groups>
-    <test name="Reportar incidencia" duration-ms="8348" started-at="2022-11-23T17:09:57 CLST" finished-at="2022-11-23T17:10:06 CLST">
+    <test name="Reportar incidencia" duration-ms="8051" started-at="2022-11-23T17:56:47 CLST" finished-at="2022-11-23T17:56:55 CLST">
       <class name="cl.local.test.ReportarIncidencia">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:cl.local.test.ReportarIncidencia@6580cfdd]" name="setUp" is-config="true" duration-ms="973" started-at="2022-11-23T17:09:57 CLST" finished-at="2022-11-23T17:09:58 CLST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:cl.local.test.ReportarIncidencia@6580cfdd]" name="setUp" is-config="true" duration-ms="1370" started-at="2022-11-23T17:56:47 CLST" finished-at="2022-11-23T17:56:49 CLST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="RepoIncidencia()[pri:0, instance:cl.local.test.ReportarIncidencia@6580cfdd]" name="RepoIncidencia" duration-ms="7373" started-at="2022-11-23T17:09:58 CLST" finished-at="2022-11-23T17:10:06 CLST">
+        <test-method status="PASS" signature="RepoIncidencia()[pri:0, instance:cl.local.test.ReportarIncidencia@6580cfdd]" name="RepoIncidencia" duration-ms="6678" started-at="2022-11-23T17:56:49 CLST" finished-at="2022-11-23T17:56:55 CLST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RepoIncidencia -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:cl.local.test.ReportarIncidencia@6580cfdd]" name="tearDown" is-config="true" duration-ms="232" started-at="2022-11-23T17:10:06 CLST" finished-at="2022-11-23T17:10:06 CLST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:cl.local.test.ReportarIncidencia@6580cfdd]" name="tearDown" is-config="true" duration-ms="259" started-at="2022-11-23T17:56:56 CLST" finished-at="2022-11-23T17:56:56 CLST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- cl.local.test.ReportarIncidencia -->
     </test> <!-- Reportar incidencia -->
   </suite> <!-- Suite Incidencia -->
-  <suite name="Pruebas de Login" duration-ms="43186" started-at="2022-11-23T17:09:14 CLST" finished-at="2022-11-23T17:09:57 CLST">
+  <suite name="Pruebas de Login" duration-ms="52435" started-at="2022-11-23T17:55:55 CLST" finished-at="2022-11-23T17:56:47 CLST">
     <groups>
     </groups>
-    <test name="Login ok" duration-ms="21886" started-at="2022-11-23T17:09:14 CLST" finished-at="2022-11-23T17:09:36 CLST">
+    <test name="Login ok" duration-ms="26504" started-at="2022-11-23T17:55:55 CLST" finished-at="2022-11-23T17:56:21 CLST">
       <class name="cl.local.test.LoginOKMantis">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:cl.local.test.LoginOKMantis@1c93084c]" name="setUp" is-config="true" duration-ms="15631" started-at="2022-11-23T17:09:14 CLST" finished-at="2022-11-23T17:09:30 CLST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:cl.local.test.LoginOKMantis@1c93084c]" name="setUp" is-config="true" duration-ms="3720" started-at="2022-11-23T17:55:55 CLST" finished-at="2022-11-23T17:55:58 CLST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginOK(java.lang.String,java.lang.String)[pri:0, instance:cl.local.test.LoginOKMantis@1c93084c]" name="loginOK" duration-ms="5580" started-at="2022-11-23T17:09:30 CLST" data-provider="credenciales" finished-at="2022-11-23T17:09:36 CLST">
+        <test-method status="PASS" signature="loginOK(java.lang.String,java.lang.String)[pri:0, instance:cl.local.test.LoginOKMantis@1c93084c]" name="loginOK" duration-ms="22106" started-at="2022-11-23T17:55:59 CLST" data-provider="credenciales" finished-at="2022-11-23T17:56:21 CLST">
           <params>
             <param index="0">
               <value>
@@ -105,13 +105,13 @@
         </test-method> <!-- loginOK -->
       </class> <!-- cl.local.test.LoginOKMantis -->
     </test> <!-- Login ok -->
-    <test name="Login Fail" duration-ms="21167" started-at="2022-11-23T17:09:36 CLST" finished-at="2022-11-23T17:09:57 CLST">
+    <test name="Login Fail" duration-ms="25839" started-at="2022-11-23T17:56:21 CLST" finished-at="2022-11-23T17:56:47 CLST">
       <class name="cl.local.test.LoginFailMantis">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:cl.local.test.LoginFailMantis@a9cd3b1]" name="setUp" is-config="true" duration-ms="1143" started-at="2022-11-23T17:09:36 CLST" finished-at="2022-11-23T17:09:37 CLST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:cl.local.test.LoginFailMantis@a9cd3b1]" name="setUp" is-config="true" duration-ms="1295" started-at="2022-11-23T17:56:21 CLST" finished-at="2022-11-23T17:56:23 CLST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginClaveIncorrecta()[pri:0, instance:cl.local.test.LoginFailMantis@a9cd3b1]" name="loginClaveIncorrecta" duration-ms="20020" started-at="2022-11-23T17:09:37 CLST" finished-at="2022-11-23T17:09:57 CLST">
+        <test-method status="PASS" signature="loginClaveIncorrecta()[pri:0, instance:cl.local.test.LoginFailMantis@a9cd3b1]" name="loginClaveIncorrecta" duration-ms="24543" started-at="2022-11-23T17:56:23 CLST" finished-at="2022-11-23T17:56:47 CLST">
           <reporter-output>
             <line>
               <![CDATA[Es posible que su cuenta esté desactivada o bloqueada o que el nombre de usuario y la contraseña proporcionados sean incorrectos.]]>
@@ -121,7 +121,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- loginClaveIncorrecta -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:cl.local.test.LoginFailMantis@a9cd3b1]" name="tearDown" is-config="true" duration-ms="147" started-at="2022-11-23T17:09:57 CLST" finished-at="2022-11-23T17:09:57 CLST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:cl.local.test.LoginFailMantis@a9cd3b1]" name="tearDown" is-config="true" duration-ms="151" started-at="2022-11-23T17:56:47 CLST" finished-at="2022-11-23T17:56:47 CLST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
