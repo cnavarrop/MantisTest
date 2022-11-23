@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="22,351">
+           time="8,446">
   <properties />
   
   
-            <testcase name="eliminarIncidencia" time="22,351" classname="cl.local.test.EliminarIncidencia" />
+            <testcase name="eliminarIncidencia" time="8,446" classname="cl.local.test.EliminarIncidencia" />
       
 </testsuite>

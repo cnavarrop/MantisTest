@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="5,504">
+           time="7,373">
   <properties />
   
   
-            <testcase name="RepoIncidencia" time="5,504" classname="cl.local.test.ReportarIncidencia" />
+            <testcase name="RepoIncidencia" time="7,373" classname="cl.local.test.ReportarIncidencia" />
       
 </testsuite>

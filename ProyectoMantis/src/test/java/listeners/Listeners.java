@@ -5,11 +5,17 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.annotations.Test;
 
-public class Listeners implements ITestListener{
+import com.relevantcodes.extentreports.LogStatus;
+
+import cl.local.base.Base;
+
+public class Listeners extends Base implements ITestListener{
 	
 	public void onTestStart(ITestResult result) {
 	    Reporter.log("Inicio de Ejecución de testcase: "+result.getName());
+	    test = rep.startTest(result.getName());
 	  }
 
 	  /**
@@ -20,6 +26,9 @@ public class Listeners implements ITestListener{
 	   */
 	  public void onTestSuccess(ITestResult result) {
 	    Reporter.log("Ejecución finalizada correctamente...");
+	    test.log(LogStatus.PASS, result.getName()+ "Finalizo Correctamente");
+	    rep.endTest(test);
+	    rep.flush();
 	  }
 
 	  /**

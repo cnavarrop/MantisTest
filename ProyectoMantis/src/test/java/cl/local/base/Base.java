@@ -25,6 +25,11 @@ import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
+import utils.ExtentManager;
+
 
 public class Base {
 
@@ -35,6 +40,8 @@ public class Base {
 	private FirefoxOptions fo;
 	public Wait<WebDriver> wait;
 	public static Logger log = Logger.getLogger("devpinoyLogger");
+	public ExtentReports rep = ExtentManager.getIntance();
+	public static ExtentTest test;
 	
 	public WebDriver getDriver() {
 		wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofSeconds(5))

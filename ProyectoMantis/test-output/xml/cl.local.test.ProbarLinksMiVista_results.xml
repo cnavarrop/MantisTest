@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="51,534">
+           time="48,693">
   <properties />
   
   
-            <testcase name="LinksMiVista" time="51,534" classname="cl.local.test.ProbarLinksMiVista" />
+            <testcase name="LinksMiVista" time="48,693" classname="cl.local.test.ProbarLinksMiVista" />
       
 </testsuite>
