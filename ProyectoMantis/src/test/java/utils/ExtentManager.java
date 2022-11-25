@@ -13,7 +13,7 @@ public class ExtentManager {
 	{
 		if(extent == null) {
 			extent = new ExtentReports(System.getProperty("user.dir")+ "\\test-output\\html\\extentReports.html", true, DisplayOrder.OLDEST_FIRST);
-			extent.loadConfig(new File(System.getProperty("user.dir")+"\\src\\test\\resources\\extentConfig\\ExtentReportConfig.xml" ));
+			extent.loadConfig(new File(System.getProperty("user.dir")+"\\src\\test\\resources\\extentConfig\\ExtentReportConfig.xml"));
 		}
 		
 		return extent;
