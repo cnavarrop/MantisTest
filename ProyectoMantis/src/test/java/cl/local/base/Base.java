@@ -3,10 +3,8 @@ package cl.local.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -19,19 +17,18 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+
+import utils.ExtentManager;
+
 
 public class Base {
 
@@ -42,19 +39,25 @@ public class Base {
 	private FirefoxOptions fo;
 	public Wait<WebDriver> wait;
 	public static Logger log = Logger.getLogger("devpinoyLogger");
+
 	
 	public WebDriver getDriver() {
 		wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofSeconds(5))
 				.ignoring(NoSuchElementException.class);
 		return driver;
 	}
+	
+	@BeforeSuite
+	public void IniReport() {
+		ExtentManager.getIntance();
+	}
     
-	@BeforeClass 
+	@BeforeMethod
 	public void setUp() {
 		if (driver == null)
 			try {
-				fis = new FileInputStream(
-						"D:\\info\\eclipse-workspace\\ProyectoMantis\\src\\test\\resources\\propiedades\\config.properties");
+				fis = new FileInputStream(System.getProperty("user.dir")+
+						"\\src\\test\\resources\\propiedades\\config.properties");
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -91,12 +94,19 @@ public class Base {
 		}
 	}
 
-	@AfterSuite
+	@AfterMethod
 	public void tearDown() {
 		if (driver != null) {
 			driver.quit();
 		}
 	}
+	
+	@AfterSuite
+	public void endReport()
+	{
+		ExtentManager.endReport();
+	}
+	
 
 	public static void LogoutMantis() {
 		driver.findElement(By.xpath(prop.getProperty("xpathMiUsuario"))).click();

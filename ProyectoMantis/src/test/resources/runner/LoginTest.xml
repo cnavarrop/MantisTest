@@ -8,10 +8,10 @@
 		</classes>
 	</test> <!-- Test -->
 
-	<test name="Login Fail">
+	<!-- <test name="Login Fail">
 		<classes>
 			<class name="cl.local.test.LoginFailMantis"></class>
 		</classes>
-	</test>
+	</test> -->
 
 </suite> <!-- Suite -->

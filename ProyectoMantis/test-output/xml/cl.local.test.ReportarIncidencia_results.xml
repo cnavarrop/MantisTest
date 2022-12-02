@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Reportar incidencia"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="6,678">
+  <properties />
+  
+  
+            <testcase name="RepoIncidencia" time="6,678" classname="cl.local.test.ReportarIncidencia" />
+      
+</testsuite>

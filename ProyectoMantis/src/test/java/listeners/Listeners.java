@@ -1,84 +1,61 @@
 package listeners;
 
-import org.apache.commons.math3.analysis.function.Log;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.Reporter;
 
-public class Listeners implements ITestListener{
-	
+import com.aventstack.extentreports.Status;
+
+import utils.ExtentManager;
+
+public class Listeners extends ExtentManager implements ITestListener {
+
 	public void onTestStart(ITestResult result) {
-	    // not implemented
-	  }
+		// TODO Auto-generated method stub
+		test = extent.createTest(result.getName());
 
-	  /**
-	   * Invoked each time a test succeeds.
-	   *
-	   * @param result <code>ITestResult</code> containing information about the run test
-	   * @see ITestResult#SUCCESS
-	   */
-	  public void onTestSuccess(ITestResult result) {
-	    Reporter.log("Ejecución finalizada correctamente...");
-	  }
+	}
 
-	  /**
-	   * Invoked each time a test fails.
-	   *
-	   * @param result <code>ITestResult</code> containing information about the run test
-	   * @see ITestResult#FAILURE
-	   */
-	  public void onTestFailure(ITestResult result) {
-		  Reporter.log("Ejecución finalizada con errores... "+result);
-	  }
+	public void onTestSuccess(ITestResult result) {
+		// TODO Auto-generated method stub
+		if (result.getStatus() == ITestResult.SUCCESS) {
+			test.log(Status.PASS, "Test Passed");
+		}
 
-	  /**
-	   * Invoked each time a test is skipped.
-	   *
-	   * @param result <code>ITestResult</code> containing information about the run test
-	   * @see ITestResult#SKIP
-	   */
-	  public void onTestSkipped(ITestResult result) {
-	    // not implemented
-	  }
+	}
 
-	  /**
-	   * Invoked each time a method fails but has been annotated with successPercentage and this failure
-	   * still keeps it within the success percentage requested.
-	   *
-	   * @param result <code>ITestResult</code> containing information about the run test
-	   * @see ITestResult#SUCCESS_PERCENTAGE_FAILURE
-	   */
-	  public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-	    // not implemented
-	  }
+	public void onTestFailure(ITestResult result) {
+		// TODO Auto-generated method stub
+		if (result.getStatus() == ITestResult.FAILURE) {
+			test.log(Status.FAIL, "Test Fail");
+		}
+	}
 
-	  /**
-	   * Invoked each time a test fails due to a timeout.
-	   *
-	   * @param result <code>ITestResult</code> containing information about the run test
-	   */
-	  public void onTestFailedWithTimeout(ITestResult result) {
-	    onTestFailure(result);
-	  }
+	public void onTestSkipped(ITestResult result) {
+		// TODO Auto-generated method stub
+		if (result.getStatus() == ITestResult.SKIP) {
+			test.log(Status.SKIP, "Test Skipped");
+		}
+	}
 
-	  /**
-	   * Invoked before running all the test methods belonging to the classes inside the &lt;test&gt; tag
-	   * and calling all their Configuration methods.
-	   *
-	   * @param context The test context
-	   */
-	  public void onStart(ITestContext context) {
-	    Reporter.log("iniciando la prueba "+context.getName());
-	  }
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		// TODO Auto-generated method stub
+		ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
+	}
 
-	  /**
-	   * Invoked after all the test methods belonging to the classes inside the &lt;test&gt; tag have run
-	   * and all their Configuration methods have been called.
-	   *
-	   * @param context The test context
-	   */
-	  public void onFinish(ITestContext context) {
-	    // not implemented
-	  }
+	public void onTestFailedWithTimeout(ITestResult result) {
+		// TODO Auto-generated method stub
+		ITestListener.super.onTestFailedWithTimeout(result);
+	}
+
+	public void onStart(ITestContext context) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void onFinish(ITestContext context) {
+		// TODO Auto-generated method stub
+		ITestListener.super.onFinish(context);
+	}
+
 }

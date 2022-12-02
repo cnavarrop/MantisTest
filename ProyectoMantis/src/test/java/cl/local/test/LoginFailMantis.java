@@ -15,7 +15,7 @@ public class LoginFailMantis extends Base{
 		LogInMantis(prop.getProperty("user"), "PassErronea");
 		String alert = driver.findElement(By.xpath(prop.getProperty("alertLogin"))).getText();
 		if (driver.findElement(By.xpath(prop.getProperty("alertLogin"))).isDisplayed()) {
-			Assert.fail(alert);
+			Reporter.log(alert);
 		}
 		Reporter.log("Prueba Finalizada correctamente");
 		driver.close();

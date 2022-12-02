@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ProbarLinksMiVista"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="58,968">
+  <properties />
+  
+  
+            <testcase name="LinksMiVista" time="58,968" classname="cl.local.test.ProbarLinksMiVista" />
+      
+</testsuite>
