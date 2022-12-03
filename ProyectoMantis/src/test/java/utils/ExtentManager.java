@@ -8,6 +8,12 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentManager {
+	
+	/*
+	 * para poder visualizar el reporte bien en jenkins se debe instalar el plugin
+	 * Html publisher y al ejecutar jenkins ingresar el siguiente parametro: java
+	 * -Dhudson.model.DirectoryBrowserSupport.CSP="" -jar jenkins.war
+	 */
 
 	public static ExtentReports extent;
 	public static ExtentHtmlReporter html;
