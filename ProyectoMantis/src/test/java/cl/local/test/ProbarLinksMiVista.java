@@ -13,7 +13,6 @@ public class ProbarLinksMiVista extends Base{
 		LogInMantis(prop.getProperty("user"), prop.getProperty("pass"));
 		driver.findElement(By.xpath("//*[@id=\"sidebar\"]/ul/li[1]/a")).click();
 		probarLinks();
-		LogoutMantis();
 	}
 
 }

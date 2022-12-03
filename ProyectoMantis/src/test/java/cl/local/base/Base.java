@@ -22,13 +22,18 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-import utils.ExtentManager;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.externalconfig.model.Config;
 
+import utils.ExtentManager;
 
 public class Base {
 
@@ -40,24 +45,23 @@ public class Base {
 	public Wait<WebDriver> wait;
 	public static Logger log = Logger.getLogger("devpinoyLogger");
 
-	
 	public WebDriver getDriver() {
 		wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofSeconds(5))
 				.ignoring(NoSuchElementException.class);
 		return driver;
 	}
-	
+
 	@BeforeSuite
 	public void IniReport() {
 		ExtentManager.getIntance();
 	}
-    
+
 	@BeforeMethod
 	public void setUp() {
 		if (driver == null)
 			try {
-				fis = new FileInputStream(System.getProperty("user.dir")+
-						"\\src\\test\\resources\\propiedades\\config.properties");
+				fis = new FileInputStream(
+						System.getProperty("user.dir") + "\\src\\test\\resources\\propiedades\\config.properties");
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -80,7 +84,7 @@ public class Base {
 					e.printStackTrace();
 				}
 			} else if (prop.getProperty("navegador").equals("firefox")) {
-				
+
 				fo = new FirefoxOptions();
 
 				try {
@@ -97,32 +101,30 @@ public class Base {
 	@AfterMethod
 	public void tearDown() {
 		if (driver != null) {
+			LogoutMantis();
 			driver.quit();
 		}
 	}
-	
+
 	@AfterSuite
-	public void endReport()
-	{
+	public void endReport() {
 		ExtentManager.endReport();
 	}
-	
 
 	public static void LogoutMantis() {
 		driver.findElement(By.xpath(prop.getProperty("xpathMiUsuario"))).click();
 		driver.findElement(By.xpath(prop.getProperty("xpathSalir"))).click();
-		driver.close();
 		log.debug("Logout satisfactorio");
 	}
 
 	public void LogInMantis(String user, String pass) {
 		driver.get(prop.getProperty("urlAcceso"));
 		driver.manage().window().maximize();
-		driver.findElement(By.xpath(prop.getProperty("xpathUser"))).sendKeys(user);
-		driver.findElement(By.xpath(prop.getProperty("submit"))).click();
-		driver.findElement(By.xpath(prop.getProperty("xpathPassw"))).sendKeys(pass);
-		driver.findElement(By.xpath(prop.getProperty("submit"))).click();
-		log.debug("Ingreso satisfactorio a la url: "+ prop.getProperty("urlAcceso"));
+		Type("xpathUser", user);
+		ClickOn("submit");
+		Type("xpathPassw", pass);
+		ClickOn("submit");
+		log.debug("Ingreso satisfactorio a la url: " + prop.getProperty("urlAcceso"));
 	}
 
 	public void probarLinks() {
@@ -152,17 +154,45 @@ public class Base {
 				e.printStackTrace();
 			}
 		}
-		
+
 		System.out.println("Links con errores");
 		for (String fail : linksFails) {
 			System.out.println(fail);
 		}
-		
+
 		System.out.println("Links correctos");
 		for (String OK : linksOK) {
 			System.out.println(OK);
 		}
 
+	}
+
+	public void ClickOn(String Locator) {
+		String path = System.getProperty("user.dir")+prop.getProperty("PathImagenes")+Locator+".png";
+		driver.findElement(By.xpath(prop.getProperty(Locator))).click();
+		ExtentManager.test.log(Status.INFO, "Click en: " + Locator);
+		try {
+			utils.ScreenShot.screenShot(Locator);
+			ExtentManager.test.addScreenCaptureFromPath(path, "Click en: "+Locator);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+
+	}
+
+	public void Type(String Locator, String value) {
+		String path = System.getProperty("user.dir")+prop.getProperty("PathImagenes")+Locator+".png";
+		driver.findElement(By.xpath(prop.getProperty(Locator))).sendKeys(value);
+		ExtentManager.test.log(Status.INFO, "Click en: " + Locator + " Se ingresa el valor: " + value);
+		try {
+			utils.ScreenShot.screenShot(Locator);
+			ExtentManager.test.addScreenCaptureFromPath(path, "se ingresa el valor: "+value);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

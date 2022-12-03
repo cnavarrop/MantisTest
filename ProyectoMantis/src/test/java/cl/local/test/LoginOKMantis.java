@@ -1,6 +1,5 @@
 package cl.local.test;
 
-import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -17,10 +16,7 @@ public class LoginOKMantis extends Base {
 	public void loginOK(String user, String pass) {
 
 		LogInMantis(user, pass);
-		LogoutMantis();
-		log.debug("Prueba finalizada satisfactoriamente");
-		Reporter.log("Prueba finalizada satisfactoriamente");
-
+		
 	}
 
 	@DataProvider(name = "credenciales")
@@ -28,5 +24,8 @@ public class LoginOKMantis extends Base {
 		Object datos[][] = data.TestData(path, hoja);
 		return datos;
 	}
+	
+	
+	
 
 }

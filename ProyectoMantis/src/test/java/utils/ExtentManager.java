@@ -18,6 +18,7 @@ public class ExtentManager {
 			html = new ExtentHtmlReporter(System.getProperty("user.dir") + "\\test-output\\html\\ExtentReport.html");
 			html.config().setDocumentTitle("Reporte de test Automatizados");
 			html.config().setTheme(Theme.DARK);
+			html.config().setCSS(".r-img { width: 30%; }");
 			extent = new ExtentReports();
 			extent.attachReporter(html);
 		}

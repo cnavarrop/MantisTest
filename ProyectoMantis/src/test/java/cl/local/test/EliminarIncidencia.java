@@ -33,7 +33,6 @@ public class EliminarIncidencia extends Base {
 			}
 		}
 
-		LogoutMantis();
 	}
 
 	public List<String> ListaIncidencias() {

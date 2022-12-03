@@ -8,7 +8,7 @@
           <include name="IniReport"/>
           <include name="endReport"/>
           <include name="tearDown"/>
-          <include name="loginOK"/>
+          <include name="loginOK" invocation-numbers="0"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- cl.local.test.LoginOKMantis -->

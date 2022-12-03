@@ -3,17 +3,19 @@
 <suite name="Master">
 	<listeners>
 	<listener class-name="listeners.Listeners"></listener>
+	<!-- <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener> -->
 	</listeners>
 	<suite-files>
 		<suite-file
 			path="./src/test/resources/runner/LoginTest.xml"></suite-file>
-		<suite-file
-			path="./src/test/resources/runner/IngresoIncidencia.xml"></suite-file>
+		<!-- <suite-file
+	path="./src/test/resources/runner/IngresoIncidencia.xml"></suite-file>
 
 		<suite-file
 			path="./src/test/resources/runner/ProbarLinks.xml"></suite-file>
 		<suite-file
-			path="./src/test/resources/runner/EliminarIncidencia.xml"></suite-file>
+			path="./src/test/resources/runner/EliminarIncidencia.xml"></suite-file> -->
 
 	</suite-files>
 

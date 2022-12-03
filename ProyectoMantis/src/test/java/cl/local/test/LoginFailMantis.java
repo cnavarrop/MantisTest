@@ -18,7 +18,6 @@ public class LoginFailMantis extends Base{
 			Reporter.log(alert);
 		}
 		Reporter.log("Prueba Finalizada correctamente");
-		driver.close();
 
 	}
 
