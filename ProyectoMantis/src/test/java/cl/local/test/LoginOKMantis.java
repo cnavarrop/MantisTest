@@ -1,5 +1,8 @@
 package cl.local.test;
 
+import java.io.IOException;
+import java.util.Hashtable;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -8,22 +11,22 @@ import utils.ExcelData;
 
 public class LoginOKMantis extends Base {
 
-	String path = System.getProperty("user.dir") + "\\src\\test\\resources\\excel\\Credenciales.xlsx";
-	String hoja = "LoginOKMantis";
-	ExcelData data = new ExcelData();
+	//ExcelData data = new ExcelData();
 
-	@Test(dataProvider = "credenciales")
-	public void loginOK(String user, String pass) {
-
-		LogInMantis(user, pass);
+	@Test(dataProviderClass = ExcelData.class, dataProvider = "dp")
+	public void loginOKMantis(Hashtable<String, String> data) {
+		
+        String usuario = data.get("Usuario");
+        String pass = data.get("Contraseña");
+		LogInMantis(usuario, pass);
 		
 	}
 
-	@DataProvider(name = "credenciales")
-	public Object[][] getDatos() {
-		Object datos[][] = data.TestData(path, hoja);
-		return datos;
-	}
+//	@DataProvider(name = "credenciales")
+//	public Object[][] getDatos() {
+//		Object datos[][] = data.TestData(path, hoja);
+//		return datos;
+//	}
 	
 	
 	

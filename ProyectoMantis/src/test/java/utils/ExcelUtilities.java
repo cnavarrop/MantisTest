@@ -9,9 +9,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtilities {
 
-	static String pathProyecto;
-	static XSSFWorkbook wbook;
-	static XSSFSheet sheet;
+	public static String pathProyecto;
+	public static XSSFWorkbook wbook;
+	public static XSSFSheet sheet;
 
 	public ExcelUtilities(String path, String hoja) {
 

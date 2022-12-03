@@ -30,8 +30,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.MediaEntityModelProvider;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.externalconfig.model.Config;
+import com.aventstack.extentreports.markuputils.Markup;
 
 import utils.ExtentManager;
 
@@ -121,9 +124,9 @@ public class Base {
 		driver.get(prop.getProperty("urlAcceso"));
 		driver.manage().window().maximize();
 		Type("xpathUser", user);
-		ClickOn("submit");
+		ClickOn("submit_login");
 		Type("xpathPassw", pass);
-		ClickOn("submit");
+		ClickOn("submit_pass");
 		log.debug("Ingreso satisfactorio a la url: " + prop.getProperty("urlAcceso"));
 	}
 
@@ -169,26 +172,28 @@ public class Base {
 
 	public void ClickOn(String Locator) {
 		String path = System.getProperty("user.dir")+prop.getProperty("PathImagenes")+Locator+".png";
-		driver.findElement(By.xpath(prop.getProperty(Locator))).click();
-		ExtentManager.test.log(Status.INFO, "Click en: " + Locator);
 		try {
+			driver.findElement(By.xpath(prop.getProperty(Locator))).click();
 			utils.ScreenShot.screenShot(Locator);
-			ExtentManager.test.addScreenCaptureFromPath(path, "Click en: "+Locator);
+			MediaEntityModelProvider img = MediaEntityBuilder.createScreenCaptureFromPath(path).build();
+			ExtentManager.test.log(Status.INFO ,"click en: "+Locator, img);
+		
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
+		
+
 
 	}
 
 	public void Type(String Locator, String value) {
 		String path = System.getProperty("user.dir")+prop.getProperty("PathImagenes")+Locator+".png";
-		driver.findElement(By.xpath(prop.getProperty(Locator))).sendKeys(value);
-		ExtentManager.test.log(Status.INFO, "Click en: " + Locator + " Se ingresa el valor: " + value);
 		try {
+			driver.findElement(By.xpath(prop.getProperty(Locator))).sendKeys(value);
 			utils.ScreenShot.screenShot(Locator);
-			ExtentManager.test.addScreenCaptureFromPath(path, "se ingresa el valor: "+value);
+			MediaEntityModelProvider img = MediaEntityBuilder.createScreenCaptureFromPath(path).build();
+			ExtentManager.test.log(Status.INFO ,"Se ingresa el valor: "+Locator, img);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

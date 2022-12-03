@@ -2,38 +2,33 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="166466" started-at="2022-12-03T10:44:53 CLST" finished-at="2022-12-03T10:47:40 CLST">
+  <suite name="Default suite" duration-ms="15529" started-at="2022-12-03T17:45:14 CLST" finished-at="2022-12-03T17:45:29 CLST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="166466" started-at="2022-12-03T10:44:53 CLST" finished-at="2022-12-03T10:47:40 CLST">
+    <test name="Default test" duration-ms="15529" started-at="2022-12-03T17:45:14 CLST" finished-at="2022-12-03T17:45:29 CLST">
       <class name="cl.local.test.LoginOKMantis">
-        <test-method status="PASS" signature="IniReport()[pri:0, instance:cl.local.test.LoginOKMantis@47d9a273]" name="IniReport" is-config="true" duration-ms="191" started-at="2022-12-03T10:44:53 CLST" finished-at="2022-12-03T10:44:53 CLST">
+        <test-method status="PASS" signature="IniReport()[pri:0, instance:cl.local.test.LoginOKMantis@17776a8]" name="IniReport" is-config="true" duration-ms="238" started-at="2022-12-03T17:45:14 CLST" finished-at="2022-12-03T17:45:14 CLST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IniReport -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:cl.local.test.LoginOKMantis@47d9a273]" name="setUp" is-config="true" duration-ms="7344" started-at="2022-12-03T10:44:55 CLST" finished-at="2022-12-03T10:45:02 CLST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:cl.local.test.LoginOKMantis@17776a8]" name="setUp" is-config="true" duration-ms="9991" started-at="2022-12-03T17:45:16 CLST" finished-at="2022-12-03T17:45:26 CLST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="loginOK(java.lang.String,java.lang.String)[pri:0, instance:cl.local.test.LoginOKMantis@47d9a273]" name="loginOK" duration-ms="112492" started-at="2022-12-03T10:45:02 CLST" data-provider="credenciales" finished-at="2022-12-03T10:46:55 CLST">
+        <test-method status="FAIL" signature="loginOKMantis(java.util.Hashtable)[pri:0, instance:cl.local.test.LoginOKMantis@17776a8]" name="loginOKMantis" duration-ms="3032" started-at="2022-12-03T17:45:26 CLST" data-provider="dp" finished-at="2022-12-03T17:45:29 CLST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[cnavarrp]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Metalero]]>
+                <![CDATA[{Usuario=cnavarrp, Contraseña=Metalero}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at cl.local.base.Base.Type(Base.java:178)
-at cl.local.base.Base.LogInMantis(Base.java:123)
-at cl.local.test.LoginOKMantis.loginOK(LoginOKMantis.java:18)
+at cl.local.base.Base.Type(Base.java:196)
+at cl.local.base.Base.LogInMantis(Base.java:126)
+at cl.local.test.LoginOKMantis.loginOKMantis(LoginOKMantis.java:21)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -67,8 +62,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginOK -->
-        <test-method status="FAIL" signature="tearDown()[pri:0, instance:cl.local.test.LoginOKMantis@47d9a273]" name="tearDown" is-config="true" duration-ms="405" started-at="2022-12-03T10:47:07 CLST" finished-at="2022-12-03T10:47:07 CLST">
+        </test-method> <!-- loginOKMantis -->
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:cl.local.test.LoginOKMantis@17776a8]" name="tearDown" is-config="true" duration-ms="136" started-at="2022-12-03T17:45:29 CLST" finished-at="2022-12-03T17:45:29 CLST">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='dropdown-toggle']/span[@class='user-info']"}
@@ -77,9 +72,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [83c3eee5e3ee6ea06d2a2827319861ce, findElement {using=xpath, value=//a[@class='dropdown-toggle']/span[@class='user-info']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\cnavarrp\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58202}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.125:4444/ses..., se:cdpVersion: 107.0.5304.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 83c3eee5e3ee6ea06d2a2827319861ce]]>
+Command: [1ac6520ca92052a6e89d4187e8e62677, findElement {using=xpath, value=//a[@class='dropdown-toggle']/span[@class='user-info']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\cnavarrp\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50986}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.125:4444/ses..., se:cdpVersion: 107.0.5304.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ac6520ca92052a6e89d4187e8e62677]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='dropdown-toggle']/span[@class='user-info']"}
@@ -88,9 +83,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [83c3eee5e3ee6ea06d2a2827319861ce, findElement {using=xpath, value=//a[@class='dropdown-toggle']/span[@class='user-info']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\cnavarrp\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58202}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.125:4444/ses..., se:cdpVersion: 107.0.5304.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 83c3eee5e3ee6ea06d2a2827319861ce
+Command: [1ac6520ca92052a6e89d4187e8e62677, findElement {using=xpath, value=//a[@class='dropdown-toggle']/span[@class='user-info']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\cnavarrp\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50986}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.125:4444/ses..., se:cdpVersion: 107.0.5304.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ac6520ca92052a6e89d4187e8e62677
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -105,8 +100,8 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at cl.local.base.Base.LogoutMantis(Base.java:115)
-at cl.local.base.Base.tearDown(Base.java:104)
+at cl.local.base.Base.LogoutMantis(Base.java:118)
+at cl.local.base.Base.tearDown(Base.java:107)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -146,7 +141,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:cl.local.test.LoginOKMantis@47d9a273]" name="endReport" is-config="true" duration-ms="54" started-at="2022-12-03T10:47:50 CLST" finished-at="2022-12-03T10:47:50 CLST">
+        <test-method status="PASS" signature="endReport()[pri:0, instance:cl.local.test.LoginOKMantis@17776a8]" name="endReport" is-config="true" duration-ms="5" started-at="2022-12-03T17:45:30 CLST" finished-at="2022-12-03T17:45:30 CLST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->

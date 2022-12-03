@@ -5,10 +5,10 @@
     <classes>
       <class name="cl.local.test.LoginOKMantis">
         <methods>
+          <include name="loginOKMantis" invocation-numbers="0"/>
           <include name="IniReport"/>
           <include name="endReport"/>
           <include name="tearDown"/>
-          <include name="loginOK" invocation-numbers="0"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- cl.local.test.LoginOKMantis -->

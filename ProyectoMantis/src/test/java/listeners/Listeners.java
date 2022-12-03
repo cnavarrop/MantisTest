@@ -21,7 +21,7 @@ public class Listeners extends ExtentManager implements ITestListener {
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
 		test = extent.createTest(result.getName());
-
+        
 	}
 
 	public void onTestSuccess(ITestResult result) {
