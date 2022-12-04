@@ -47,6 +47,7 @@ public class Base {
 	private FirefoxOptions fo;
 	public Wait<WebDriver> wait;
 	public static Logger log = Logger.getLogger("devpinoyLogger");
+	public String browser;
 
 	public WebDriver getDriver() {
 		wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofSeconds(5))
@@ -76,30 +77,37 @@ public class Base {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		{
-			if (prop.getProperty("navegador").equals("chrome")) {
-				co = new ChromeOptions();
-				try {
-					driver = new RemoteWebDriver(new URL(prop.getProperty("urlNode")), co);
-					log.debug("Inicialización de chrome");
-				} catch (MalformedURLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			} else if (prop.getProperty("navegador").equals("firefox")) {
-				fo.setCapability("browserName", "Firefox");
-			    fo.setCapability("browserVersion", "107.0.1");
-				fo = new FirefoxOptions();
 
-				try {
-					driver = new RemoteWebDriver(new URL(prop.getProperty("urlNode")), fo);
-					log.debug("Inicialización de firefox");
-				} catch (MalformedURLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+		if (System.getenv("browser") != null && !System.getenv("browser").isEmpty()) {
+			browser = System.getenv("browser");
+		} else {
+			browser = prop.getProperty("navegador");
+		}
+
+		if (browser.equals("chrome")) {
+			co = new ChromeOptions();
+			try {
+				driver = new RemoteWebDriver(new URL(prop.getProperty("urlNode")), co);
+				log.debug("Inicialización de chrome");
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} else if ((browser.equals("firefox"))) {
+			fo.setCapability("browserName", "Firefox");
+			fo.setCapability("browserVersion", "107.0.1");
+			fo = new FirefoxOptions();
+
+			try {
+				driver = new RemoteWebDriver(new URL(prop.getProperty("urlNode")), fo);
+				log.debug("Inicialización de firefox");
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
+	}
+
 	}
 
 	@AfterMethod
@@ -172,29 +180,27 @@ public class Base {
 	}
 
 	public void ClickOn(String Locator) {
-		String path = System.getProperty("user.dir")+prop.getProperty("PathImagenes")+Locator+".png";
+		String path = System.getProperty("user.dir") + prop.getProperty("PathImagenes") + Locator + ".png";
 		try {
 			driver.findElement(By.xpath(prop.getProperty(Locator))).click();
 			utils.ScreenShot.screenShot(Locator);
 			MediaEntityModelProvider img = MediaEntityBuilder.createScreenCaptureFromPath(path).build();
-			ExtentManager.test.log(Status.INFO ,"click en: "+Locator, img);
-		
+			ExtentManager.test.log(Status.INFO, "click en: " + Locator, img);
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-
 
 	}
 
 	public void Type(String Locator, String value) {
-		String path = System.getProperty("user.dir")+prop.getProperty("PathImagenes")+Locator+".png";
+		String path = System.getProperty("user.dir") + prop.getProperty("PathImagenes") + Locator + ".png";
 		try {
 			driver.findElement(By.xpath(prop.getProperty(Locator))).sendKeys(value);
 			utils.ScreenShot.screenShot(Locator);
 			MediaEntityModelProvider img = MediaEntityBuilder.createScreenCaptureFromPath(path).build();
-			ExtentManager.test.log(Status.INFO ,"Se ingresa el valor: "+Locator, img);
+			ExtentManager.test.log(Status.INFO, "Se ingresa el valor: " + Locator, img);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
