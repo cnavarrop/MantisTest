@@ -87,7 +87,8 @@ public class Base {
 					e.printStackTrace();
 				}
 			} else if (prop.getProperty("navegador").equals("firefox")) {
-
+				fo.setCapability("browserName", "Firefox");
+			    fo.setCapability("browserVersion", "107.0.1");
 				fo = new FirefoxOptions();
 
 				try {
