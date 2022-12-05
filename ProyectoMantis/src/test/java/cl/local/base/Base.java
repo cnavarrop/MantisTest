@@ -62,7 +62,7 @@ public class Base {
 
 	@BeforeMethod
 	public void setUp() {
-		if (driver == null)
+		if (driver == null) {
 			try {
 				fis = new FileInputStream(
 						System.getProperty("user.dir") + "\\src\\test\\resources\\propiedades\\config.properties");
@@ -109,6 +109,7 @@ public class Base {
 	}
 
 	}
+
 
 	@AfterMethod
 	public void tearDown() {
