@@ -78,8 +78,8 @@ public class Base {
 			e.printStackTrace();
 		}
 
-		if (System.getenv("browser") != null && !System.getenv("browser").isEmpty()) {
-			browser = System.getenv("browser");
+		if (System.getenv("navegador") != null && !System.getenv("navegador").isEmpty()) {
+			browser = System.getenv("navegador");
 		} else {
 			browser = prop.getProperty("navegador");
 		}
