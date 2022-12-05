@@ -97,9 +97,8 @@ public class Base {
 			}
 		} else if ((browser.equals("firefox"))) {
 			System.setProperty("webdriver.gecko.driver", "D:\\Selenium\\Grid\\geckodriver.exe");
-			fo.setCapability("browserName", "Firefox");
-			fo.setCapability("browserVersion", "107.0.1");
 			fo = new FirefoxOptions();
+			fo.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
 
 			try {
 				driver = new RemoteWebDriver(new URL(prop.getProperty("urlNode")), fo);
