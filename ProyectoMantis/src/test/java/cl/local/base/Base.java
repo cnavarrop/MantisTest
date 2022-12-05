@@ -83,6 +83,8 @@ public class Base {
 		} else {
 			browser = prop.getProperty("navegador");
 		}
+		
+		System.setProperty("navagador", browser);
 
 		if (browser.equals("chrome")) {
 			co = new ChromeOptions();
