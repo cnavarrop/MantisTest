@@ -1,5 +1,0 @@
-2022-11-16 15:48:23 DEBUG devpinoyLogger:64 - Carga de archivo property
-2022-11-16 15:48:32 DEBUG devpinoyLogger:74 - Inicialización de chrome
-2022-11-16 15:48:36 DEBUG devpinoyLogger:113 - Ingreso satisfactorio a la url: http://18.206.238.171:8989/login_page.php
-2022-11-16 15:48:53 DEBUG devpinoyLogger:103 - Logout satisfactorio
-2022-11-16 15:48:53 DEBUG devpinoyLogger:15 - Prueba finalizada satisfactoriamente
