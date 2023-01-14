@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-14T20:41:05 CLST" name="Default suite" finished-at="2023-01-14T20:41:23 CLST" duration-ms="17179">
+  <suite started-at="2023-01-14T20:53:40 CLST" name="Default suite" finished-at="2023-01-14T20:54:00 CLST" duration-ms="20000">
     <groups>
     </groups>
-    <test started-at="2023-01-14T20:41:05 CLST" name="Default test" finished-at="2023-01-14T20:41:23 CLST" duration-ms="17179">
+    <test started-at="2023-01-14T20:53:40 CLST" name="Default test" finished-at="2023-01-14T20:54:00 CLST" duration-ms="20000">
       <class name="cl.local.test.LoginOKMantis">
-        <test-method is-config="true" signature="IniReport()[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:41:05 CLST" name="IniReport" finished-at="2023-01-14T20:41:05 CLST" duration-ms="92" status="PASS">
+        <test-method is-config="true" signature="IniReport()[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:53:39 CLST" name="IniReport" finished-at="2023-01-14T20:53:40 CLST" duration-ms="286" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IniReport -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:41:06 CLST" name="setUp" finished-at="2023-01-14T20:41:07 CLST" duration-ms="1304" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:53:41 CLST" name="setUp" finished-at="2023-01-14T20:53:44 CLST" duration-ms="2700" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginOKMantis(java.util.Hashtable)[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:41:07 CLST" name="loginOKMantis" data-provider="dp" finished-at="2023-01-14T20:41:14 CLST" duration-ms="6309" status="PASS">
+        <test-method signature="loginOKMantis(java.util.Hashtable)[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:53:44 CLST" name="loginOKMantis" data-provider="dp" finished-at="2023-01-14T20:53:50 CLST" duration-ms="6489" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,15 +26,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginOKMantis -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:41:14 CLST" name="tearDown" finished-at="2023-01-14T20:41:15 CLST" duration-ms="1043" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:53:50 CLST" name="tearDown" finished-at="2023-01-14T20:53:51 CLST" duration-ms="1140" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:41:15 CLST" name="setUp" finished-at="2023-01-14T20:41:16 CLST" duration-ms="690" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:53:51 CLST" name="setUp" finished-at="2023-01-14T20:53:52 CLST" duration-ms="686" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginOKMantis(java.util.Hashtable)[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:41:16 CLST" name="loginOKMantis" data-provider="dp" finished-at="2023-01-14T20:41:22 CLST" duration-ms="6046" status="PASS">
+        <test-method signature="loginOKMantis(java.util.Hashtable)[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:53:52 CLST" name="loginOKMantis" data-provider="dp" finished-at="2023-01-14T20:53:58 CLST" duration-ms="6138" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,11 +45,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginOKMantis -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:41:22 CLST" name="tearDown" finished-at="2023-01-14T20:41:23 CLST" duration-ms="1029" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:53:58 CLST" name="tearDown" finished-at="2023-01-14T20:54:00 CLST" duration-ms="1260" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:41:23 CLST" name="endReport" finished-at="2023-01-14T20:41:23 CLST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:cl.local.test.LoginOKMantis@3c0be339]" started-at="2023-01-14T20:54:00 CLST" name="endReport" finished-at="2023-01-14T20:54:00 CLST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->

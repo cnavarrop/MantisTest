@@ -1,9 +1,7 @@
 package cl.local.test;
 
-import java.io.IOException;
 import java.util.Hashtable;
 
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import cl.local.base.Base;
