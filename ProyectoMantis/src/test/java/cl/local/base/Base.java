@@ -22,20 +22,16 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.MediaEntityModelProvider;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.externalconfig.model.Config;
-import com.aventstack.extentreports.markuputils.Markup;
 
+import testlink.api.java.client.TestLinkAPIClient;
+import testlink.api.java.client.TestLinkAPIException;
 import utils.ExtentManager;
 
 public class Base {
@@ -48,6 +44,11 @@ public class Base {
 	public Wait<WebDriver> wait;
 	public static Logger log = Logger.getLogger("devpinoyLogger");
 	public String browser;
+	
+	//variables para actualización de Test en Testlink
+	public static String DEVKEY="d2afc5b3d973e3a6abb4c3a94f9a7d83";
+	public static String URL="http://18.206.238.171/lib/api/xmlrpc/v1/xmlrpc.php";
+	
 
 	public WebDriver getDriver() {
 		wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofSeconds(5))
@@ -123,6 +124,16 @@ public class Base {
 	@AfterSuite
 	public void endReport() {
 		ExtentManager.endReport();
+		
+	}
+	
+	
+	 
+	public static void reportResult(String TestProject,String TestPlan,String Testcase,String Build,String Notes,String Result) throws TestLinkAPIException{
+		
+	TestLinkAPIClient api=new TestLinkAPIClient(DEVKEY, URL);
+	api.reportTestCaseResult(TestProject, TestPlan, Testcase, Build, Notes, Result);
+	
 	}
 
 	public static void LogoutMantis() {
@@ -187,7 +198,7 @@ public class Base {
 			driver.findElement(By.xpath(prop.getProperty(Locator))).click();
 			utils.ScreenShot.screenShot(Locator);
 			MediaEntityModelProvider img = MediaEntityBuilder.createScreenCaptureFromPath(path).build();
-			ExtentManager.test.log(Status.INFO, "click en: " + Locator, img);
+			//ExtentManager.test.log(Status.INFO, "click en: " + Locator, img);
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -202,7 +213,7 @@ public class Base {
 			driver.findElement(By.xpath(prop.getProperty(Locator))).sendKeys(value);
 			utils.ScreenShot.screenShot(Locator);
 			MediaEntityModelProvider img = MediaEntityBuilder.createScreenCaptureFromPath(path).build();
-			ExtentManager.test.log(Status.INFO, "Se ingresa el valor: " + Locator, img);
+			//ExtentManager.test.log(Status.INFO, "Se ingresa el valor: " + Locator, img);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
