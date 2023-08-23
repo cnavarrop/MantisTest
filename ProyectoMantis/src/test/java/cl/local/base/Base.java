@@ -90,6 +90,7 @@ public class Base {
 		if (browser.equals("chrome")) {
 			co = new ChromeOptions();
 			try {
+				System.setProperty("webdriver.chrome.driver", "D:\\\\Selenium\\\\chromedriver-win64\\\\chromedriver.exe");
 				driver = new RemoteWebDriver(new URL(prop.getProperty("urlNode")), co);
 				log.debug("Inicialización de chrome");
 			} catch (MalformedURLException e) {

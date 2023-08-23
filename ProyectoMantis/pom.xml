@@ -90,6 +90,7 @@
 			<version>4.0.9</version>
 		</dependency>
 
+       <!--dependencias para integración con testlink-->
 		<!-- https://mvnrepository.com/artifact/com.github.kalokanand/testlink-api-client -->
 		<dependency>
 			<groupId>com.github.kalokanand</groupId>
